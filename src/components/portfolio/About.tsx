@@ -156,7 +156,7 @@ export default function About() {
               </p>
 
               <p className="text-white font-medium mt-1">
-                Computer Science & IT
+                Computer Science & Information Technolegy
               </p>
             </div>
           </div>
