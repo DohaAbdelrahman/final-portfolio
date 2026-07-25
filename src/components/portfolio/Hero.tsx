@@ -70,47 +70,46 @@ export default function Hero() {
           animate="visible"
           className="flex flex-col items-center w-full"
         >
-          {/* Profile image placeholder */}
-          <motion.div variants={itemVariants} className="mb-8">
-            <div className="relative w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] rounded-full glass glow-cyan p-[2px]">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan/30 via-transparent to-cyan/10" />
-              <div className="relative w-full h-full rounded-full bg-surface flex items-center justify-center overflow-hidden">
-                <span className="text-3xl sm:text-4xl font-bold text-cyan text-glow-cyan select-none">
-                  AC
-                </span>
-              </div>
-              {/* Animated ring */}
-              <div className="absolute -inset-1 rounded-full border border-cyan/20 animate-[spin_10s_linear_infinite]" />
-              <div className="absolute -inset-1 rounded-full border border-transparent border-t-cyan/40 animate-[spin_6s_linear_infinite_reverse]" />
-            </div>
-          </motion.div>
 
-          {/* Greeting */}
-          <motion.span
+          <motion.div
             variants={itemVariants}
-            className="text-muted-foreground text-sm sm:text-base font-mono tracking-widest uppercase mb-3"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan/20 bg-cyan/5 px-4 py-2"
           >
-            Hello, I&apos;m
-          </motion.span>
+            <span className="text-xl">👋</span>
+            <span className="text-sm uppercase tracking-[0.2em] text-cyan">
+              Hello, I'm
+            </span>
+          </motion.div>
 
           {/* Name */}
           <motion.h1
             variants={itemVariants}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-4"
           >
-            Alex{' '}
-            <span className="text-cyan text-glow-cyan">Chen</span>
+            Doha{' '}
+            <span className="text-cyan text-glow-cyan">Abdelrahman</span>
           </motion.h1>
 
-          {/* Title */}
-          <motion.p
+          <motion.div
             variants={itemVariants}
-            className="text-lg sm:text-xl md:text-2xl font-medium mb-6"
-          >
-            <span className="text-white">Data Scientist</span>
-            <span className="text-muted-foreground mx-2">&</span>
-            <span className="text-white">Data Analyst</span>
-          </motion.p>
+            className="w-40 h-[2px] bg-gradient-to-r from-transparent via-cyan to-transparent mb-6"
+          />
+
+         {/* Title */}
+        <motion.div
+          variants={itemVariants}
+          className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-6 text-lg md:text-xl font-medium"
+        >
+          <span className="text-cyan font-bold">Data Science</span>
+
+          <span className="text-white/30">|</span>
+
+          <span className="text-white">Data Analysis</span>
+
+          <span className="text-white/30">|</span>
+
+          <span className="text-white">Machine Learning</span>
+        </motion.div>
 
           {/* Tagline */}
           <motion.p
