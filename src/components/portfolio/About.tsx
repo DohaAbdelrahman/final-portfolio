@@ -1,7 +1,14 @@
-'use client';
-
 import { motion } from 'framer-motion';
-import { Brain, BarChart3, Sparkles, BookOpen } from 'lucide-react';
+import {
+  Brain,
+  BarChart3,
+  Sparkles,
+  BookOpen,
+  GraduationCap,
+  Cpu,
+  Database,
+} from 'lucide-react';
+
 import SectionHeading from './SectionHeading';
 import GlassCard from './GlassCard';
 import AnimatedSection from './AnimatedSection';
@@ -9,27 +16,30 @@ import StaggerGrid from './StaggerGrid';
 
 const highlights = [
   {
-    icon: Brain,
-    title: 'Machine Learning',
-    description: 'Building predictive models that learn and improve from experience',
+    icon: Sparkles,
+    title: 'Data Science',
+    description:
+      'Transforming data into meaningful insights and practical solutions.',
   },
   {
     icon: BarChart3,
     title: 'Data Analysis',
-    description: 'Uncovering patterns and trends hidden in complex datasets',
+    description:
+      'Exploring datasets, identifying patterns, and creating interactive dashboards.',
   },
   {
-    icon: Sparkles,
-    title: 'AI Solutions',
-    description: 'Designing intelligent systems that automate and optimize',
+    icon: Brain,
+    title: 'Machine Learning',
+    description:
+      'Building predictive models and experimenting with intelligent algorithms.',
   },
   {
     icon: BookOpen,
-    title: 'Research',
-    description: 'Pushing boundaries with cutting-edge research methodologies',
+    title: 'AI & Computer Vision',
+    description:
+      'Continuously learning modern AI techniques with a growing interest in Computer Vision.',
   },
 ];
-
 export default function About() {
   return (
     <section id="about" className="relative">
@@ -40,7 +50,7 @@ export default function About() {
         <SectionHeading
           label="Who I Am"
           title="About Me"
-          subtitle="Driven by curiosity, powered by data"
+          subtitle="Exploring data, creating insights, and building intelligent solutions."
           align="center"
         />
 
@@ -62,7 +72,7 @@ export default function About() {
                       <Brain className="w-10 h-10 text-cyan" />
                     </div>
                     <p className="text-cyan font-mono text-sm tracking-wider">
-                      &lt;data_scientist /&gt;
+                      &lt;aspiring_data_scientist /&gt;
                     </p>
                   </div>
                 </div>
@@ -88,48 +98,137 @@ export default function About() {
             </AnimatedSection>
           </div>
 
-          {/* Right bio text */}
-          <div className="md:col-span-7">
-            <AnimatedSection animation="fadeRight" delay={0.2} duration={0.8}>
-              <div className="space-y-5 text-muted-foreground leading-relaxed text-base md:text-[17px]">
-                <p>
-                  <span className="text-white font-medium">I&apos;m Alex Chen</span>, a passionate Data
-                  Scientist and Data Analyst with over five years of experience
-                  turning raw, complex data into strategic, actionable insights. My
-                  journey into data science was born from an insatiable curiosity
-                  about the stories hidden within numbers and the patterns that
-                  shape our world.
-                </p>
-                <p>
-                  I specialize in building end-to-end machine learning pipelines —
-                  from data collection and exploratory analysis through model
-                  development, evaluation, and deployment. Whether it&apos;s
-                  forecasting customer churn, classifying medical images, or
-                  optimizing supply-chain logistics, I thrive on problems where
-                  data meets real-world impact.
-                </p>
-                <p>
-                  My approach is rooted in both rigor and creativity. I combine
-                  classical statistical methods with cutting-edge deep learning
-                  architectures, always ensuring that every model I ship is
-                  interpretable, reproducible, and aligned with business
-                  objectives. I believe the best data science doesn&apos;t just
-                  predict — it explains.
-                </p>
-                <p>
-                  Beyond the code, I&apos;m deeply invested in the data science
-                  community. I contribute to open-source projects, publish
-                  technical articles, and continuously explore emerging areas
-                  like generative AI and causal inference to keep my skillset
-                  sharp and forward-looking.
-                </p>
-              </div>
-            </AnimatedSection>
+         {/* Right bio text */}
+<div className="md:col-span-7">
+  <AnimatedSection animation="fadeRight" delay={0.2} duration={0.8}>
+    <div className="space-y-6">
+
+      <p className="text-muted-foreground leading-relaxed text-base md:text-[17px]">
+        <span className="text-white font-semibold">
+          I&apos;m Doha Abdelrahman
+        </span>
+        , a Computer Science and Information Technology student specializing in
+        <span className="text-cyan"> Data Science</span> at Helwan National
+        University. I&apos;m passionate about exploring data, uncovering
+        patterns, and creating meaningful insights that help solve real-world
+        problems.
+      </p>
+
+
+      <p className="text-muted-foreground leading-relaxed text-base md:text-[17px]">
+        Throughout my academic journey, I have gained hands-on experience in
+        <span className="text-white"> Data Science</span>,
+        <span className="text-white"> Data Analysis</span>, and
+        <span className="text-white"> Machine Learning</span> through projects,
+        internships, and continuous learning. I enjoy analyzing datasets,
+        building dashboards, and developing predictive models to support
+        data-driven decisions.
+      </p>
+
+
+      <p className="text-muted-foreground leading-relaxed text-base md:text-[17px]">
+        Currently, I&apos;m expanding my knowledge in
+        <span className="text-cyan"> Artificial Intelligence</span> and
+        <span className="text-cyan"> Computer Vision</span>, while improving my
+        technical and problem-solving skills. My goal is to grow as a Data
+        Scientist and create impactful solutions using data and AI.
+      </p>
+
+    </div>
+
+
+    {/* Quick Facts */}
+    <div className="mt-8">
+      <GlassCard className="p-6">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+
+          {/* Education */}
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 rounded-xl bg-cyan/10 flex items-center justify-center">
+              <GraduationCap className="w-5 h-5 text-cyan" />
+            </div>
+
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-cyan/80">
+                Education
+              </p>
+
+              <p className="text-white font-medium mt-1">
+                Computer Science & IT
+              </p>
+            </div>
           </div>
+
+
+
+          {/* Specialization */}
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 rounded-xl bg-cyan/10 flex items-center justify-center">
+              <Database className="w-5 h-5 text-cyan" />
+            </div>
+
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-cyan/80">
+                Specialization
+              </p>
+
+              <p className="text-white font-medium mt-1">
+                Data Science
+              </p>
+            </div>
+          </div>
+
+
+
+          {/* Core Focus */}
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 rounded-xl bg-cyan/10 flex items-center justify-center">
+              <BarChart3 className="w-5 h-5 text-cyan" />
+            </div>
+
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-cyan/80">
+                Core Focus
+              </p>
+
+              <p className="text-white font-medium mt-1">
+                Data Analysis
+              </p>
+            </div>
+          </div>
+
+
+
+          {/* Interests */}
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 rounded-xl bg-cyan/10 flex items-center justify-center">
+              <Cpu className="w-5 h-5 text-cyan" />
+            </div>
+
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-cyan/80">
+                Interests
+              </p>
+
+              <p className="text-white font-medium mt-1">
+                AI & Computer Vision
+              </p>
+            </div>
+          </div>
+
+
         </div>
 
+      </GlassCard>
+    </div>
+
+
+  </AnimatedSection>
+</div>
         {/* Highlight cards */}
-        <div className="mt-20 md:mt-24">
+        <div className="mt-16 md:mt-16">
           <StaggerGrid
             className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5"
             staggerDelay={0.1}
