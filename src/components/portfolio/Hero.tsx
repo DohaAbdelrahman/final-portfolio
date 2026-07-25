@@ -1,22 +1,28 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FolderGit2, Award, Clock, Code2, Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import ParticleCanvas from './ParticleCanvas';
 import AnimatedSection from './AnimatedSection';
 import MagneticButton from './MagneticButton';
 
-const stats = [
-  { icon: FolderGit2, number: '15+', label: 'Projects' },
-  { icon: Award, number: '12', label: 'Certifications' },
-  { icon: Clock, number: '5+', label: 'Years' },
-  { icon: Code2, number: '20+', label: 'Technologies' },
-];
 
 const socials = [
-  { icon: Github, href: '#', label: 'GitHub' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Mail, href: '#', label: 'Email' },
+  {
+    icon: Github,
+    href: "https://github.com/DohaAbdelrahman",
+    label: "GitHub",
+  },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/doha-abdelrahman-3540292a5/",
+    label: "LinkedIn",
+  },
+  {
+    icon: Mail,
+    href: "mailto:dohaabdo757@gmail.com",
+    label: "Email",
+  },
 ];
 
 const containerVariants = {
@@ -32,7 +38,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as const},
   },
 };
 
@@ -116,52 +122,28 @@ export default function Hero() {
             variants={itemVariants}
             className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-10"
           >
-            Transforming complex data into intelligent, actionable insights
-            that drive innovation.
+            Data Science Student passionate about Machine Learning, AI, and Data Analytics. Building practical projects and continuously learning to solve real-world problems with data.
           </motion.p>
-
-          {/* Stat cards */}
-          <motion.div
-            variants={itemVariants}
-            className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 w-full max-w-2xl mb-10"
-          >
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="glass rounded-xl p-3 sm:p-4 text-center group hover:animate-pulse-glow transition-all duration-300"
-              >
-                <stat.icon className="w-4 h-4 sm:w-5 sm:h-5 text-cyan mx-auto mb-2 group-hover:scale-110 transition-transform" />
-                <div className="text-xl sm:text-2xl font-bold text-white">
-                  {stat.number}
-                </div>
-                <div className="text-xs sm:text-sm text-muted-foreground">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-10"
+            className="flex flex-wrap items-center justify-center gap-5 mt-2 mb-12"
           >
-            <MagneticButton>
-              <a href="#projects" className="btn-primary">
-                <span>View Projects</span>
-                <ArrowDown className="w-4 h-4" />
-              </a>
-            </MagneticButton>
 
             <MagneticButton>
-              <a href="#" className="btn-secondary">
-                <span>Download Resume</span>
+              <a 
+              href="https://drive.google.com/file/d/1vlPN2HeH4bDd-tXfGg2ckXORN8nZMT-C/view?usp=sharing" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary">
+                <span>Download CV</span>
               </a>
             </MagneticButton>
 
             <MagneticButton>
               <a href="#contact" className="btn-secondary">
-                <span>Contact Me</span>
+                <span>Let's Connect</span>
               </a>
             </MagneticButton>
           </motion.div>
@@ -175,6 +157,8 @@ export default function Hero() {
               <a
                 key={social.label}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={social.label}
                 className="w-10 h-10 sm:w-11 sm:h-11 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-cyan hover:glow-cyan transition-all duration-300 group"
               >
@@ -185,15 +169,30 @@ export default function Hero() {
         </motion.div>
 
         {/* Scroll indicator */}
-        <AnimatedSection animation="fadeUp" delay={1.2} className="absolute bottom-8 left-1/2 -translate-x-1/2">
-          <motion.div
+        <AnimatedSection
+          animation="fadeUp"
+          delay={1.2}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        >
+          <motion.a
+            href="#about"
+            className="flex justify-center items-start w-7 h-12 border-2 border-cyan/50 rounded-full p-1"
             animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-            className="flex flex-col items-center gap-2 text-muted-foreground/50"
+            transition={{
+              duration: 1.8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
           >
-            <span className="text-xs font-mono tracking-widest uppercase">Scroll</span>
-            <ArrowDown className="w-4 h-4" />
-          </motion.div>
+            <motion.div
+              className="w-1.5 h-1.5 rounded-full bg-cyan"
+              animate={{ y: [0, 18, 0] }}
+              transition={{
+                duration: 1.8,
+                repeat: Infinity,
+              }}
+            />
+          </motion.a>
         </AnimatedSection>
       </div>
     </section>

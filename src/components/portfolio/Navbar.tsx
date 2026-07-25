@@ -71,7 +71,7 @@ export default function Navbar() {
                 className="text-xl font-bold tracking-tight text-white hover:text-cyan transition-colors duration-300"
               >
                 <span className="text-cyan">&lt;</span>
-                AC
+                DOHA
                 <span className="text-cyan"> /&gt;</span>
               </button>
             </MagneticButton>
