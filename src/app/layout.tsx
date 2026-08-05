@@ -27,8 +27,10 @@ export const metadata: Metadata = {
     "PyTorch",
   ],
   authors: [{ name: "Doha Abdelrahman" }],
+  
   icons: {
-    icon: "/workspaces/final-portfolio/public/favicon.png.png",
+    icon: "/favicon.png",
+}
   },
   openGraph: {
     title: "Doha Abdelrahman — Data Scientist & Data Analyst",
