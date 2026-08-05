@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Chen — Data Scientist & Data Analyst",
+  title: "Doha Abdelrahman — Data Scientist & Data Analyst",
   description:
     "Elite Data Scientist & Data Analyst specializing in Machine Learning, Deep Learning, and AI-driven solutions. Building intelligent systems that transform data into impactful decisions.",
   keywords: [
@@ -26,19 +26,19 @@ export const metadata: Metadata = {
     "TensorFlow",
     "PyTorch",
   ],
-  authors: [{ name: "Alex Chen" }],
+  authors: [{ name: "Doha Abdelrahman" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "/workspaces/final-portfolio/public/favicon.png.png",
   },
   openGraph: {
-    title: "Alex Chen — Data Scientist & Data Analyst",
+    title: "Doha Abdelrahman — Data Scientist & Data Analyst",
     description:
       "Elite Data Scientist & Data Analyst specializing in Machine Learning, Deep Learning, and AI-driven solutions.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alex Chen — Data Scientist & Data Analyst",
+    title: "Doha Abdelrahman — Data Scientist & Data Analyst",
     description:
       "Elite Data Scientist & Data Analyst specializing in Machine Learning, Deep Learning, and AI-driven solutions.",
   },
