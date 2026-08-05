@@ -30,7 +30,6 @@ export const metadata: Metadata = {
   
   icons: {
     icon: "/favicon.png",
-}
   },
   openGraph: {
     title: "Doha Abdelrahman — Data Scientist & Data Analyst",
